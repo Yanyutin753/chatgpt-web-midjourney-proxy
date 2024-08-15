@@ -203,9 +203,9 @@ export default {
     ,setUploaderUrl:'上传地址:'
     ,setBtSave:'保存'
     ,setBtBack:'恢复默认'
-
-    ,
-    redraw:'局部重绘'
+    ,U:'放大'
+    ,V:'变化'
+    ,redraw:'局部重绘'
     ,fail1:'客官不要太急嘛，正在加载呢'
     ,success1:'图片刷新成功！'
     ,high_variation:'强变化'

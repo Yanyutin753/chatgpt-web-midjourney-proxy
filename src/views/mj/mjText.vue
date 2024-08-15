@@ -119,10 +119,10 @@ const maskOk=(d:any)=>{
 //专业版本按钮
 const bt= [ 
     [
-    {k:':upsample::1',n:'U1'}
-    ,{k:':upsample::2',n:'U2'}
-    ,{k:':upsample::3',n:'U3'}
-    ,{k:':upsample::4',n:'U4'} 
+    {k:':upsample::1',n: t('U') + '1'}
+    ,{k:':upsample::2',n: t('U') + '2'}
+    ,{k:':upsample::3',n: t('U') + '3'}
+    ,{k:':upsample::4',n: t('U') + '4'} 
         ,{k:'high_variation',n: t('mj.high_variation')},
         {k:'low_variation',n:t('mj.low_variation')},
         {k:':Inpaint::1',n:t('mj.redraw')},
@@ -148,10 +148,10 @@ const bt= [
        // ,{k:'Job::PicReader::all',n:'全4张'}
     ]
     ,[
-    {k:':variation::1',n:'V1'}
-    ,{k:':variation::2',n:'V2'}
-    ,{k:':variation::3',n:'V3'}
-    ,{k:':variation::4',n:'V4'}
+    {k:':variation::1',n: t('V') + '1'}
+    ,{k:':variation::2',n: t('V') + '2'}
+    ,{k:':variation::3',n: t('V') + '3'}
+    ,{k:':variation::4',n: t('V') + '4'}
     ,{k:'pan_left',n: t('mj.pan_left')}
     ,{k:'pan_right',n:t('mj.pan_right') }
     ,{k:'pan_up',n:t('mj.pan_up')}

@@ -138,7 +138,7 @@ function handleRegenerate2() {
     >
       <AvatarComponent :image="inversion" :logo="chat.logo"/>
     </div>
-    <div class="overflow-hidden text-sm " :class="[inversion ? 'items-end' : 'items-start']">
+    <div class="overflow-hidden text-sm" :class="[inversion ? 'items-end ml-2' : 'items-start mr-8']">
       <p class="text-xs group  text-[#b4bbc4] flex  items-center space-x-2 " :class="[inversion ? 'justify-end' : 'justify-start']">
         <span>{{ dateTime }}</span>
         <span v-if="chat.model"  class="text-[#b4bbc4]/50">{{ chat.model }}</span>

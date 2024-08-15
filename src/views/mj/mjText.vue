@@ -119,10 +119,10 @@ const maskOk=(d:any)=>{
 //专业版本按钮
 const bt= [ 
     [
-    {k:':upsample::1',n: t('U') + '1'}
-    ,{k:':upsample::2',n: t('U') + '2'}
-    ,{k:':upsample::3',n: t('U') + '3'}
-    ,{k:':upsample::4',n: t('U') + '4'} 
+    {k:':upsample::1',n: t('mj.U') + '1'}
+    ,{k:':upsample::2',n: t('mj.U') + '2'}
+    ,{k:':upsample::3',n: t('mj.U') + '3'}
+    ,{k:':upsample::4',n: t('mj.U') + '4'} 
         ,{k:'high_variation',n: t('mj.high_variation')},
         {k:'low_variation',n:t('mj.low_variation')},
         {k:':Inpaint::1',n:t('mj.redraw')},
@@ -148,10 +148,10 @@ const bt= [
        // ,{k:'Job::PicReader::all',n:'全4张'}
     ]
     ,[
-    {k:':variation::1',n: t('V') + '1'}
-    ,{k:':variation::2',n: t('V') + '2'}
-    ,{k:':variation::3',n: t('V') + '3'}
-    ,{k:':variation::4',n: t('V') + '4'}
+    {k:':variation::1',n: t('mj.V') + '1'}
+    ,{k:':variation::2',n: t('mj.V') + '2'}
+    ,{k:':variation::3',n: t('mj.V') + '3'}
+    ,{k:':variation::4',n: t('mj.V') + '4'}
     ,{k:'pan_left',n: t('mj.pan_left')}
     ,{k:'pan_right',n:t('mj.pan_right') }
     ,{k:'pan_up',n:t('mj.pan_up')}
@@ -256,16 +256,16 @@ load();
             <template v-else-if="chat.opt?.action==='UPSCALE' || 'DESCRIBE'===chat.opt?.action"></template>
             <template v-else>
                 <div class="flex space-x-2">
-                    <NButton type="primary" @click="sub('UPSCALE',1)"  size="small">{{ $t('U') + '1'}}</NButton>
-                    <NButton type="primary" @click="sub('UPSCALE',2)"  size="small">{{ $t('U') + '2'}}</NButton>
-                    <NButton type="primary" @click="sub('UPSCALE',3)"  size="small">{{ $t('U') + '3'}}</NButton>
-                    <NButton type="primary" @click="sub('UPSCALE',4)"  size="small">{{ $t('U') + '4'}}</NButton>
+                    <NButton type="primary" @click="sub('UPSCALE',1)"  size="small">{{ $t('mj.U') + '1'}}</NButton>
+                    <NButton type="primary" @click="sub('UPSCALE',2)"  size="small">{{ $t('mj.U') + '2'}}</NButton>
+                    <NButton type="primary" @click="sub('UPSCALE',3)"  size="small">{{ $t('mj.U') + '3'}}</NButton>
+                    <NButton type="primary" @click="sub('UPSCALE',4)"  size="small">{{ $t('mj.U') + '4'}}</NButton>
                 </div>
                 <div class="flex space-x-2">
-                    <NButton type="warning" @click="sub('VARIATION',1)"  size="small">{{ $t('V') + '1'}}</NButton>
-                    <NButton type="warning" @click="sub('VARIATION',2)"  size="small">{{ $t('V') + '2'}}</NButton>
-                    <NButton type="warning" @click="sub('VARIATION',3)"  size="small">{{ $t('V') + '3'}}</NButton>
-                    <NButton type="warning" @click="sub('VARIATION',4)"  size="small">{{ $t('V') + '4'}}</NButton>
+                    <NButton type="warning" @click="sub('VARIATION',1)"  size="small">{{ $t('mj.V') + '1'}}</NButton>
+                    <NButton type="warning" @click="sub('VARIATION',2)"  size="small">{{ $t('mj.V') + '2'}}</NButton>
+                    <NButton type="warning" @click="sub('VARIATION',3)"  size="small">{{ $t('mj.V') + '3'}}</NButton>
+                    <NButton type="warning" @click="sub('VARIATION',4)"  size="small">{{ $t('mj.V') + '4'}}</NButton>
                     <NButton type="warning" @click="sub('REROLL',1)"  size="small" v-if="chat.opt?.action==='IMAGINE'">{{ $t('mjchat.reroll') }}</NButton>
 
                 </div>

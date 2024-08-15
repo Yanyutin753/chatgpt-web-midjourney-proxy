@@ -591,8 +591,8 @@ const ychat = computed( ()=>{
       <div id="scrollRef" ref="scrollRef" class="h-full overflow-hidden overflow-y-auto">
         <div
           id="image-wrapper"
-          class="w-full max-w-screen-xl m-auto dark:bg-[#101014]"
-          :class="[isMobile ? 'p-2' : 'p-4']"
+          class="w-full max-w-screen-2xl m-auto dark:bg-[#101014]"
+          :class="[isMobile ? 'p-4' : 'p-4']"
         >
           <template v-if="!dataSources.length">
             <div class="text-center pt-10" v-if="homeStore.myData.isClient && ( !gptServerStore.myData.OPENAI_API_BASE_URL || !gptServerStore.myData.OPENAI_API_KEY)">

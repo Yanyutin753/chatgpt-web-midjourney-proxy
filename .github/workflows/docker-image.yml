@@ -6,6 +6,11 @@ on:
   workflow_dispatch:
   release:
     types: [published]
+  push:
+    branches:
+      - main
+    tags:
+      - v*
 
 jobs:
   push_to_registry:

@@ -268,7 +268,7 @@ load();
                     <NButton type="warning" @click="sub('VARIATION',4)"  size="small">{{ $t('mj.V') + '4'}}</NButton>
                 </div>
                 <div class="flex space-x-2">
-                    <NButton type="warning" @click="sub('REROLL',1)"  size="small" v-if="chat.opt?.action==='IMAGINE'">{{ $t('mjchat.reroll') }}</NButton>
+                    <NButton type="info" @click="sub('REROLL',1)"  size="small" v-if="chat.opt?.action==='IMAGINE'">{{ $t('mjchat.reroll') }}</NButton>
                 </div>
             </template>
         </div>

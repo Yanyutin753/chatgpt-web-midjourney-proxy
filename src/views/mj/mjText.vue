@@ -256,16 +256,16 @@ load();
             <template v-else-if="chat.opt?.action==='UPSCALE' || 'DESCRIBE'===chat.opt?.action"></template>
             <template v-else>
                 <div class="flex space-x-2">
-                    <NButton type="primary" @click="sub('UPSCALE',1)" size="small">U1</NButton>
-                    <NButton type="primary" @click="sub('UPSCALE',2)"  size="small">U2</NButton>
-                    <NButton type="primary" @click="sub('UPSCALE',3)"  size="small">U3</NButton>
-                    <NButton type="primary" @click="sub('UPSCALE',4)"  size="small">U4</NButton>
+                    <NButton type="primary" @click="sub('UPSCALE',1)"  size="small">{{ $t('U') + '1'}}</NButton>
+                    <NButton type="primary" @click="sub('UPSCALE',2)"  size="small">{{ $t('U') + '2'}}</NButton>
+                    <NButton type="primary" @click="sub('UPSCALE',3)"  size="small">{{ $t('U') + '3'}}</NButton>
+                    <NButton type="primary" @click="sub('UPSCALE',4)"  size="small">{{ $t('U') + '4'}}</NButton>
                 </div>
                 <div class="flex space-x-2">
-                    <NButton type="warning" @click="sub('VARIATION',1)"  size="small">V1</NButton>
-                    <NButton type="warning" @click="sub('VARIATION',2)"  size="small">V2</NButton>
-                    <NButton type="warning" @click="sub('VARIATION',3)"  size="small">V3</NButton>
-                    <NButton type="warning" @click="sub('VARIATION',4)"  size="small">V4</NButton>
+                    <NButton type="warning" @click="sub('VARIATION',1)"  size="small">{{ $t('V') + '1'}}</NButton>
+                    <NButton type="warning" @click="sub('VARIATION',2)"  size="small">{{ $t('V') + '2'}}</NButton>
+                    <NButton type="warning" @click="sub('VARIATION',3)"  size="small">{{ $t('V') + '3'}}</NButton>
+                    <NButton type="warning" @click="sub('VARIATION',4)"  size="small">{{ $t('V') + '4'}}</NButton>
                     <NButton type="warning" @click="sub('REROLL',1)"  size="small" v-if="chat.opt?.action==='IMAGINE'">{{ $t('mjchat.reroll') }}</NButton>
 
                 </div>

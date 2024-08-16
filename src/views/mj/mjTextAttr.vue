@@ -45,7 +45,7 @@ loadImages();
 <template>
   <div
     v-if="images.length"
-    class="flex flex-wrap justify-start items-baseline p-1"
+    class="flex flex-wrap justify-start items-baseline p-1 mb-1"
   >
     <div v-for="(img, k) of images" :key="k">
       <NImage

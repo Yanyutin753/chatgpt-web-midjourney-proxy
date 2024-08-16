@@ -161,19 +161,27 @@ watch(()=>homeStore.myData.act, async (n)=>{
                 let obj={
                         "role": "user",
                         "content": [] as any
-                }
+                };
                 // //"Generate code for a web page that looks exactly like this."
                 obj.content.push({ "type": "text",      "text": dd.prompt  });
                 dd.fileBase64.forEach((f:any)=>{
                     obj.content.push({ "type": "image_url",  "image_url": {url:f }   });
                 });
                 message.push(obj); 
-            }else{
-                let cc= dd.prompt;
-                //附件需要时远程的图片链接 或者文件 链接
-                let arr = dd.fileBase64.filter( (ff:string)=>ff.indexOf('http')>-1);
-                if(arr.length>0) cc = arr.join(' ')+' '+ cc ;
-                message.push({  "role": "user",  "content": cc })
+            }
+            else{
+                //附件需要时远程的图片链接 或者文件 链接 （类似于gpt-4-all，v佬国产逆向或者gpt-4o-all的文件上传方式）
+                let obj={
+                        "role": "user",
+                        "content": [] as any
+                };
+                let arr = dd.fileBase64.filter((ff: string) => ff.indexOf('http') > -1);
+                obj.content.push({ "type": "text", "text": dd.prompt });
+                arr.forEach((f: string) => {
+                    obj.content.push({ "type": "image_url", "image_url": { url: f } });
+                });
+
+                message.push(obj); 
             }
         }else{
             message.push({  "role": "user",  "content": dd.prompt })

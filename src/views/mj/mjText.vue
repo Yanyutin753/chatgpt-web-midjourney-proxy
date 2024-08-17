@@ -307,7 +307,7 @@ load();
 </template>
 
 <style>
-/* .markdown-body img.maxCss,img.maxCss ,.maxCss img  { max-width: 400px!important; max-height: 400px!important;} */
+.markdown-body img.maxCss,img.maxCss ,.maxCss img  { max-width: 400px!important; max-height: 400px!important;}
 .mmWidth{ max-width: 600px;}
 html.dark .markdown-body pre code { color:#abb2bf; }
 </style>

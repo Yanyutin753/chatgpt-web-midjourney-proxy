@@ -1,6 +1,7 @@
 import { ss } from '@/utils/storage'
 import { t } from '@/locales'
 const LOCAL_NAME = 'userStorage'
+const backgroundImage = process.env.BACKGROUND_IMAGE ?? ""
 
 export interface UserInfo {
   avatar: string
@@ -18,7 +19,7 @@ export function defaultSetting(): UserState {
     userInfo: {
       avatar: 'https://avatars.githubusercontent.com/u/132346501?v=4&size=64',
       name: t('mjset.sysname'),//'AI绘图',
-      backgroundImage: process.env.BACKGROUND_IMAGE ?? "",
+      backgroundImage: backgroundImage,
       description: 'Star on <a href="https://github.com/Yanyutin753" class="text-blue-500" target="_blank" >GitHub</a>',
     },
   }

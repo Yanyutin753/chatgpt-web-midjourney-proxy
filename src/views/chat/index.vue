@@ -601,7 +601,7 @@ const ychat = computed( ()=>{
             <div v-else-if="homeStore.myData.session.notify" v-html="homeStore.myData.session.notify" class="text-neutral-300 mt-4"></div>
             <div class="flex items-center justify-center mt-4 text-center text-neutral-300" v-else>
               <SvgIcon icon="ri:bubble-chart-fill" class="mr-2 text-3xl" />
-              <span>Aha~</span>
+              <span>Hi~</span>
             </div>
           </template>
           <template v-else>

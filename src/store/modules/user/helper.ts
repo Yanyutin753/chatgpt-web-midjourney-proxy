@@ -5,6 +5,7 @@ const LOCAL_NAME = 'userStorage'
 export interface UserInfo {
   avatar: string
   name: string
+  backgroundImage: string
   description: string
 }
 
@@ -17,6 +18,7 @@ export function defaultSetting(): UserState {
     userInfo: {
       avatar: 'https://avatars.githubusercontent.com/u/132346501?v=4&size=64',
       name: t('mjset.sysname'),//'AI绘图',
+      backgroundImage: process.env.BACKGROUND_IMAGE ?? "",
       description: 'Star on <a href="https://github.com/Yanyutin753" class="text-blue-500" target="_blank" >GitHub</a>',
     },
   }

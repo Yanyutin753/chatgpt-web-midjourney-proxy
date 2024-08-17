@@ -67,15 +67,20 @@ loadImages();
     </div>
   </div>
   <div v-if="files.length" class="block justify-start items-baseline p-1">
-    <div v-for="(file, k) of files" :key="k" class="mb-1">
-      <div class="w-full h-full block items-center text-xs text-neutral-500">
-        <a :href="file.fileBase64" target="_blank" class="flex items-center">
-          <SvgIcon icon="mdi:download" class="mr-2" />
-          <n-ellipsis style="max-width: 280px">
-            {{ file.fileName }}
-          </n-ellipsis>
-        </a>
-      </div>
+    <div
+      v-for="(file, k) of files"
+      :key="k"
+      :class="[
+        'w-full h-full block items-center text-xs text-neutral-500',
+        { 'mb-1': k !== files.length - 1 },
+      ]"
+    >
+      <a :href="file.fileBase64" target="_blank" class="flex items-center">
+        <SvgIcon icon="mdi:download" class="mr-2" />
+        <n-ellipsis style="max-width: 280px">
+          {{ file.fileName }}
+        </n-ellipsis>
+      </a>
     </div>
   </div>
 </template>

@@ -619,7 +619,7 @@ const ychat = computed(() => {
       @export="handleExport"
       @handle-clear="handleClear"
     />
-    <main class="flex-1 overflow-hidden">
+    <main class="flex-1 overflow-hidden z-10">
       <div
         id="scrollRef"
         ref="scrollRef"

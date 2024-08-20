@@ -52,7 +52,7 @@ loadImages();
         :src="img.fileBase64"
         preview
         class="rounded"
-        :class="[images.length <= 1 ? 'w-[280px]' : 'w-[130px]']"
+        :class="[images.length <= 1 ? 'w-[260px]' : 'w-[130px]']"
       >
         <template #placeholder>
           <a
@@ -77,7 +77,7 @@ loadImages();
     >
       <a :href="file.fileBase64" target="_blank" class="flex items-center">
         <SvgIcon icon="mdi:download" class="mr-2" />
-        <n-ellipsis style="max-width: 280px">
+        <n-ellipsis style="max-width: 260px">
           {{ file.fileName }}
         </n-ellipsis>
       </a>

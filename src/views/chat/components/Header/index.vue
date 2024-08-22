@@ -73,9 +73,9 @@ watch(()=>homeStore.myData.act,debounce( (n)=> n=='saveChat' && (nGptStore.value
           <SvgIcon v-else class="text-2xl" icon="ri:align-right" />
         </button>
       </div>
-      <h1  @click="st.isShow=true" class="flex-1 px-4 pr-6 overflow-hidden cursor-pointer select-none text-ellipsis whitespace-nowrap"
+      <h1 class="flex-1 px-4 pr-6 overflow-hidden cursor-pointer select-none text-ellipsis whitespace-nowrap"
         @dblclick="onScrollToTop" data-tauri-drag-region>
-        <div class="flex items-center space-x-1 cursor-pointer hover:text-[#4b9e5f]" v-if="homeStore.myData.local!='draw'">
+        <div @click="st.isShow=true"  class="flex items-center space-x-1 cursor-pointer hover:text-[#4b9e5f]" v-if="homeStore.myData.local!='draw'">
             <template   v-if="nGptStore.gpts">
              <SvgIcon icon="ri:apps-fill" /> 
              <span class="line-clamp-1 overflow-hidden">{{ nGptStore.gpts.name }}</span> 

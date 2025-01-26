@@ -34,11 +34,11 @@ watch(()=>homeStore.myData.act, (n:string)=>{
 </script>
 <template>
   <div class=" bg-gray-100 dark:bg-[#282832] h-[55px] flex  justify-around  items-center dark:text-white/70 " >
-      <div class="flex items-center justify-center flex-col"  @click="homeStore.setMyData({act:'showChat'}) "   :class="[ goHome =='Chat' ? 'active' : '']" >
+      <div v-if="!isDisableMenu( 'chat')" class="flex items-center justify-center flex-col"  @click="homeStore.setMyData({act:'showChat'}) "   :class="[ goHome =='Chat' ? 'active' : '']" >
         <SvgIcon icon="ri:wechat-line" class="text-3xl"></SvgIcon>
         <div class="text-[13px]">{{$t('mjtab.chat')}}</div>
       </div>
-      <div  v-if="!isDisableMenu ( 'gpts')"  class="flex items-center justify-center flex-col "  @click="homeStore.setMyData({act:'showgpts'}) " >
+      <div v-if="!isDisableMenu ( 'gpts')"  class="flex items-center justify-center flex-col "  @click="homeStore.setMyData({act:'showgpts'}) " >
         <SvgIcon icon="ri:apps-fill" class="text-3xl"></SvgIcon>
         <div class="text-[13px]">GPTs</div>
       </div>
